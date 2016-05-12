@@ -1,0 +1,105 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        tools:context="com.sensei374121.amey.memoryappfinalproject.fragment_UserDetail">
+
+        <ImageView
+            android:id="@+id/user_bgimage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/user_profileimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/user_bgimage"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/helloworld"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_profileimage"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/user_profileimage"
+            android:text="Hello"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/user_emailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/user_profileimage"
+            android:layout_marginTop="20dp"
+            android:text="Email : "
+            android:textColor="@color/myColorAccent"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_emailTxt"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/user_emailTxt"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/user_genderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/user_emailTxt"
+            android:layout_marginTop="10dp"
+            android:text="Gender : "
+            android:textColor="@color/myColorAccent"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/user_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_genderTxt"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/user_genderTxt"
+            android:text="Male"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_genderTxt"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/frag_memlist_RV_userdetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/user_genderTxt"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

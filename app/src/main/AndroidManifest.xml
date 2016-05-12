@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sensei374121.amey.memoryappfinalproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+
+
+        <activity android:name=".Activity_Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_CreateUser"
+            android:parentActivityName=".Activity_Login" />
+        <activity
+            android:name=".Activity_Homepage"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity_NewMemory"
+            android:label="New Memory"
+            android:parentActivityName=".Activity_Homepage"
+            />
+        <activity
+            android:name=".Activity_Memories"
+            android:label="Memories"
+            android:parentActivityName=".Activity_Homepage"/>
+        <activity
+            android:name=".Activity_SearchUsers"
+            android:label="Search Users"
+            android:parentActivityName=".Activity_Homepage" />
+        <activity
+            android:name=".Activity_FriendRequestRV"
+            android:label="Friend Requests"
+            android:parentActivityName=".Activity_Homepage" />
+        <activity
+            android:name=".Activity_ContactsRV"
+            android:label="My Contacts"
+            android:parentActivityName=".Activity_Homepage" />
+        <activity android:name=".Activity_ViewProfile"
+            android:label="My Profile"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Activity_Homepage"/>
+        <activity android:name=".Activity_UpdateProfile"
+            android:label="Update Profile"
+            android:parentActivityName=".Activity_Homepage"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD-Alqrr_p-BF3doqToFwh244r4nR8bYdg" />
+    </application>
+
+</manifest>

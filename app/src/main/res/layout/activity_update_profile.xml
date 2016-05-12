@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/act_profile_edit"
+        tools:context=".Activity_UpdateProfile">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/update_profileTxt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Update Profile"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_linear_layout"
+            android:layout_below="@id/update_profileTxt"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:id="@+id/profile_image_button"
+                android:scaleType="fitXY"
+                android:onClick="uploadProfilePicOnClick" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Upload Profile Pic"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/textinputlayoutname"
+            android:layout_toEndOf="@id/profile_linear_layout"
+            android:layout_alignTop="@id/profile_linear_layout"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="Name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_txt"
+            android:text=" Gender : "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_below="@id/profile_linear_layout"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiogroup"
+            android:layout_toEndOf="@id/radio_txt"
+            android:layout_alignBottom="@id/radio_txt"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:onClick="onRadioButtonCLicked" />
+            <RadioButton android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonCLicked"
+                android:text="Female" />
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboutmeinputlayout"
+            android:layout_below="@id/radio_txt"
+            android:layout_alignStart="@id/radio_txt"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="About me"
+                android:id="@+id/aboutme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_images"
+            android:layout_below="@id/aboutmeinputlayout"
+            android:layout_alignStart="@id/aboutmeinputlayout"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/profile_bg_button"
+                android:scaleType="fitXY"
+                android:onClick="uploadBgOnClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Upload Background Image"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UploadProfileButton"
+            android:onClick="updateProfileButtonOnCLick"
+            android:layout_below="@id/linear_images"
+            android:text="Update Profile"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+</ScrollView>

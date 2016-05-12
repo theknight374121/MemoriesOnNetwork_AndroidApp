@@ -1,0 +1,100 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_profile_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        tools:context="com.sensei374121.amey.memoryappfinalproject.fragment_profileView">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profileimage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/helloworld"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profileimage"
+            android:layout_toEndOf="@id/profileimage"
+            android:text="Hello"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileimage"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:text="Email : "
+            android:textSize="20sp"
+            android:textColor="@color/myColorAccent"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/emailTxt"
+            android:layout_alignTop="@id/emailTxt"
+            android:layout_marginStart="20dp"
+            android:text="Email"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/genderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTxt"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:text="Gender : "
+            android:textSize="20sp"
+            android:textColor="@color/myColorAccent"/>
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/genderTxt"
+            android:layout_alignTop="@id/genderTxt"
+            android:text="Male"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/aboutmeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genderTxt"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:text="About me : "
+            android:textSize="20sp"
+            android:textColor="@color/myColorAccent"/>
+
+        <TextView
+            android:id="@+id/aboutme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutmeTxt"
+            android:textSize="20sp"
+            android:text="about me"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
